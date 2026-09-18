@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HASHCOIN ($HASH) — Инфраструктурный актив сети TON</title>
+<meta name="description" content="HASHCOIN ($HASH) — децентрализованный актив в экосистеме TON. Смарт-контракт, пулы ликвидности, комьюнити.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <div class="brand">
+      <span class="brand-mark">H</span>
+      HASHCOIN <span class="mono" style="color:var(--text-faint); font-weight:500; font-size:15px;">$HASH</span>
+    </div>
+    <nav class="navlinks">
+      <a href="#tech">Технологии</a>
+      <a href="#liquidity">Ликвидность</a>
+      <a href="#ecosystem">Экосистема</a>
+    </nav>
+    <div class="nav-right">
+      <div class="status-pill">
+        <span class="dot"></span>
+        Верификация в реестре Tonkeeper
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero" style="border-bottom:1px solid var(--line-soft); padding-top:108px;">
+    <div class="wrap" style="display:grid; grid-template-columns: 1.15fr 0.85fr; gap:64px; align-items:center;">
+      <div>
+        <div class="eyebrow-line">
+          <span class="rule"></span>
+          СЕТЬ TON · ДЕЦЕНТРАЛИЗОВАННЫЙ АКТИВ
+        </div>
+        <h1>Инфраструктурный актив цифровой экономики TON</h1>
+        <p class="lead">HASHCOIN ($HASH) — токен, построенный на технологической базе The Open Network. Прозрачный смарт-контракт, открытые пулы ликвидности и публичная модель управления комьюнити.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="https://app.ston.fi/swap?chartVisible=true&ft=TON&tt=EQDHVvvLPQjoW5CFUHcIvWrKJf4ZTWyb_QpBvXR92g4drUgJ" target="_blank" rel="noopener">Торговать на STON.fi</a>
+          <a class="btn btn-outline" href="https://dedust.io/swap/TON/EQDHVvvLPQjoW5CFUHcIvWrKJf4ZTWyb_QpBvXR92g4drUgJ" target="_blank" rel="noopener">Торговать на DeDust.io</a>
+          <a class="btn btn-outline" href="https://t.me/hashua_ua" target="_blank" rel="noopener">Telegram-канал</a>
+        </div>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <div class="num">TON</div>
+          <div class="label">Блокчейн-инфраструктура</div>
+        </div>
+        <div class="stat">
+          <div class="num">2</div>
+          <div class="label">Активных пула ликвидности</div>
+        </div>
+        <div class="stat">
+          <div class="num">100%</div>
+          <div class="label">Открытый смарт-контракт</div>
+        </div>
+        <div class="stat">
+          <div class="num">24/7</div>
+          <div class="label">Доступность торгов</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TECH / CONTRACT -->
+  <section id="tech">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="index-mark">01</div>
+          <h2 style="margin-top:10px;">Технологии и смарт-контракт</h2>
+        </div>
+        <p class="desc">$HASH выпущен и обращается на блокчейне TON — сети с высокой пропускной способностью и минимальной стоимостью транзакций, что обеспечивает практичность актива для расчётов и обмена.</p>
+      </div>
+
+      <div class="tech-grid">
+        <div class="tech-col">
+          <h3>Параметры сети</h3>
+          <div class="tech-row">
+            <span class="k">Блокчейн</span>
+            <span class="v">TON (The Open Network)</span>
+          </div>
+          <div class="tech-row">
+            <span class="k">Стандарт токена</span>
+            <span class="v">Jetton</span>
+          </div>
+          <div class="tech-row">
+            <span class="k">Средняя комиссия</span>
+            <span class="v">&lt; 0.01 TON</span>
+          </div>
+          <div class="tech-row">
+            <span class="k">Скорость подтверждения</span>
+            <span class="v">~ 5 секунд</span>
+          </div>
+          <div class="tech-row">
+            <span class="k">Тип актива</span>
+            <span class="v">Децентрализованный, без эмиссионного контроля эмитента</span>
+          </div>
+        </div>
+
+        <div class="tech-col contract-box">
+          <h3>Адрес смарт-контракта</h3>
+          <div class="contract-field">
+            <span class="addr mono" id="contractAddr">EQDHVvvLPQjoW5CFUHcIvWrKJf4ZTWyb_QpBvXR92g4drUgJ</span>
+            <button class="copy-btn" id="copyBtn" onclick="copyContract()">Копировать</button>
+          </div>
+          <p class="contract-note">Проверьте адрес контракта перед взаимодействием с токеном на STON.fi, DeDust.io или в любом другом сервисе экосистемы TON.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LIQUIDITY -->
+  <section id="liquidity">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="index-mark">02</div>
+          <h2 style="margin-top:10px;">Ликвидность и торговля</h2>
+        </div>
+        <p class="desc">Ликвидность $HASH размещена в открытых пулах на децентрализованных биржах экосистемы TON. Каждый пул доступен для проверки в блокчейне.</p>
+      </div>
+
+      <div class="pool-grid">
+        <a class="pool-card" href="https://app.ston.fi/swap?chartVisible=true&ft=TON&tt=EQDHVvvLPQjoW5CFUHcIvWrKJf4ZTWyb_QpBvXR92g4drUgJ" target="_blank" rel="noopener">
+          <div class="pool-top">
+            <div>
+              <div class="pool-name">STON.fi</div>
+              <div class="pool-pair mono">TON / HASH</div>
+            </div>
+            <span class="pool-badge">DEX</span>
+          </div>
+          <p class="pool-desc">Одна из ведущих децентрализованных бирж сети TON. Пул TON/HASH доступен для обмена и предоставления ликвидности напрямую из кошелька.</p>
+          <div class="pool-link">
+            Открыть пул STON.fi
+            <span class="mono">→</span>
+          </div>
+        </a>
+
+        <a class="pool-card" href="https://dedust.io/swap/TON/EQDHVvvLPQjoW5CFUHcIvWrKJf4ZTWyb_QpBvXR92g4drUgJ" target="_blank" rel="noopener">
+          <div class="pool-top">
+            <div>
+              <div class="pool-name">DeDust.io</div>
+              <div class="pool-pair mono">TON / HASH</div>
+            </div>
+            <span class="pool-badge">DEX</span>
+          </div>
+          <p class="pool-desc">Децентрализованный протокол обмена на TON с прозрачным механизмом ценообразования. Пул TON/HASH открыт для торговли и проверки в блокчейне.</p>
+          <div class="pool-link">
+            Открыть пул DeDust.io
+            <span class="mono">→</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="liquidity-note">
+        <span class="ico mono">i</span>
+        <span>Ликвидность и все транзакции по $HASH публично доступны в блокчейне TON. Перед взаимодействием с пулами рекомендуется самостоятельно проверить адрес контракта, указанный в разделе «Технологии».</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ECOSYSTEM -->
+  <section id="ecosystem" style="border-bottom:none;">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="index-mark">03</div>
+          <h2 style="margin-top:10px;">Экосистема и комьюнити</h2>
+        </div>
+        <p class="desc">Развитие $HASH строится на открытой коммуникации с держателями токена. Все объявления и обновления публикуются в официальных каналах проекта.</p>
+      </div>
+
+      <div class="eco-grid">
+        <div class="eco-card">
+          <div class="tag mono">TELEGRAM</div>
+          <h3>Официальный канал</h3>
+          <p>Новости проекта, обновления смарт-контракта и обсуждение развития $HASH вместе с сообществом держателей.</p>
+          <a class="btn btn-outline" href="https://t.me/hashua_ua" target="_blank" rel="noopener">Перейти в канал</a>
+        </div>
+        <div class="eco-card">
+          <div class="tag mono">TELEGRAM BOT</div>
+          <h3>@HashCoin_Official_Bot</h3>
+          <p>Официальный бот проекта для быстрого доступа к информации о токене, ссылкам на пулы и текущему статусу верификации.</p>
+          <a class="btn btn-outline" href="https://t.me/HashCoin_Official_Bot" target="_blank" rel="noopener">Открыть бота</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <span class="brand-mark">H</span>
+        HASHCOIN
+      </div>
+      <div class="footer-links">
+        <a href="#tech">Технологии</a>
+        <a href="#liquidity">Ликвидность</a>
+        <a href="#ecosystem">Экосистема</a>
+        <a href="https://t.me/hashua_ua" target="_blank" rel="noopener">Telegram</a>
+      </div>
+    </div>
+
+    <div class="risk-block">
+      <strong>Уведомление о рисках.</strong> $HASH является децентрализованным цифровым активом, выпущенным на блокчейне TON. Цифровые активы подвержены высокой волатильности, и их стоимость может как расти, так и снижаться вплоть до нуля. Материалы на данном сайте носят исключительно информационный характер и не являются инвестиционной, финансовой или юридической консультацией. Перед взаимодействием со смарт-контрактом, пулами ликвидности или любыми сторонними сервисами пользователь обязан самостоятельно оценить риски и проверить актуальность указанных адресов и ссылок. Проект не несёт ответственности за действия третьих лиц, сторонние платформы и биржи, а также за решения, принятые пользователями на основании информации с данного сайта.
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 HASHCOIN. Все права защищены.</span>
+      <span class="mono" style="color:var(--text-faint);">Blockchain: TON · Standard: Jetton</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js" defer></script>
+
+</body>
+</html>
